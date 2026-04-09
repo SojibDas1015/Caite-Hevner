@@ -117,10 +117,12 @@
             class="md:h-full md:w-full hover:border-6 hover:border-teal-400 duration-200"
             src="https://i.ibb.co.com/hJbTfXyN/blue-stage.png"
             alt=""
+            data-type="video"
           />
         </div>
         <!-- grid -->
-        <a target="_blank"
+        <a
+          target="_blank"
           class="border-[20px] md:border-l-[20px] md:border-t-[20px] md:border-r-[20px] md:border-b-[0px] border-[#C20273] order-5 md:order-0 cursor-pointer"
           href="https://www.instagram.com/?hl=en"
         >
@@ -240,6 +242,7 @@
       <div class="modal-box max-w-[1200px] p-10 md:p-20 bg-[#C20273]">
         <form method="dialog">
           <button
+            id="butnClose"
             class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 bg-[#C20273] border-[#C20273]"
           >
             ✕
@@ -247,86 +250,128 @@
         </form>
         <!-- carousel -->
         <div class="carousel w-full">
-          <!-- Carousel Items -->
-          <div id="slide1" class="carousel-item relative w-full">
-            <iframe
-              class="w-full h-[50vh] object-cover object-center rounded-xl"
-              src="https://res.cloudinary.com/dbiszakzq/video/upload/v1775707533/home_hero_new_test_bxvpae.mp4"
-              frameborder="0"
-            ></iframe>
+          <div id="slide" class="carousel-item relative w-full">
+            <img
+              id="modalImage"
+              class="w-full h-[50vh] object-cover rounded-xl hidden"
+            />
+
+            <!-- video -->
+            <video
+              id="modalVideo"
+              class="w-full h-[50vh] object-cover rounded-xl hidden"
+              controls
+            ></video>
             <div
               class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
             >
-              <a href="#slide4" class="btn btn-circle bg-yellow-500">❮</a>
-              <a href="#slide2" class="btn btn-circle bg-yellow-500">❯</a>
+              <!-- <a href="#" class="btn btn-circle">❮</a> -->
+              <!-- <a href="#" class="btn btn-circle">❯</a> -->
             </div>
           </div>
-          <div id="slide2" class="carousel-item relative w-full">
+        </div>
+        <!-- secand carousoal -->
+        <div id="secandCarousel" class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
             <img
-              src="https://i.ibb.co.com/nMQF3bxk/footloose.jpg"
-              class="w-full h-[50vh] object-cover object-center rounded-xl"
+              src="https://i.ibb.co.com/fVdLtHQB/BETWEEN-THE-LINES-0744-PJZEDIT-v001.jpg"
+              class="w-full h-[50vh] object-cover rounded-xl"
             />
             <div
               class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
             >
-              <a href="#slide1" class="btn btn-circle bg-yellow-500">❮</a>
-              <a href="#slide3" class="btn btn-circle bg-yellow-500">❯</a>
+              <a href="#slide5" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <video
+              src="https://res.cloudinary.com/dbiszakzq/video/upload/v1775707533/home_hero_new_test_bxvpae.mp4"
+              class="w-full h-[50vh] object-cover rounded-xl"
+              controls
+            ></video>
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
             </div>
           </div>
           <div id="slide3" class="carousel-item relative w-full">
             <img
-              src="https://i.ibb.co.com/XfgW5p3m/0203-Trisha-Paytas-Big-Broadway-Dream-Rebecca-JMichelson-7.jpg"
-              class="w-full h-[50vh] object-cover object-center rounded-xl"
+              src="https://i.ibb.co.com/nMQF3bxk/footloose.jpg"
+              class="w-full h-[50vh] object-cover rounded-xl"
             />
             <div
               class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
             >
-              <a href="#slide2" class="btn btn-circle bg-yellow-500">❮</a>
-              <a href="#slide4" class="btn btn-circle bg-yellow-500">❯</a>
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
             </div>
           </div>
           <div id="slide4" class="carousel-item relative w-full">
             <img
-              src="https://i.ibb.co.com/rGSZZzmG/Sunday-in-the-Park.jpg"
-              class="w-full h-[50vh] object-cover object-center rounded-xl"
+              src="https://i.ibb.co.com/XfgW5p3m/0203-Trisha-Paytas-Big-Broadway-Dream-Rebecca-JMichelson-7.jpg "
+              class="w-full h-[50vh] object-cover rounded-xl"
             />
             <div
               class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
             >
-              <a href="#slide3" class="btn btn-circle bg-yellow-500">❮</a>
-              <a href="#slide1" class="btn btn-circle bg-yellow-500">❯</a>
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide5" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide5" class="carousel-item relative w-full">
+            <img
+              src="https://i.ibb.co.com/rGSZZzmG/Sunday-in-the-Park.jpg"
+              class="w-full h-[50vh] object-cover rounded-xl"
+            />
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
             </div>
           </div>
         </div>
-
         <!-- buttom images -->
-        <div class="flex justify-center space-x-4 mt-4">
-          <a href="#slide1">
-            <img
-              src="https://i.ibb.co.com/hJbTfXyN/blue-stage.png"
-              class="w-16 h-16 object-cover rounded-md cursor-pointer"
-              alt=""
-            />
-          </a>
-          <a href="#slide2">
-            <img
-              src="https://i.ibb.co.com/nMQF3bxk/footloose.jpg"
-              class="w-16 h-16 object-cover rounded-md cursor-pointer"
-            />
-          </a>
-          <a href="#slide3">
-            <img
-              src="https://i.ibb.co.com/XfgW5p3m/0203-Trisha-Paytas-Big-Broadway-Dream-Rebecca-JMichelson-7.jpg"
-              class="w-16 h-16 object-cover rounded-md cursor-pointer"
-            />
-          </a>
-          <a href="#slide4">
-            <img
-              src="https://i.ibb.co.com/rGSZZzmG/Sunday-in-the-Park.jpg"
-              class="w-16 h-16 object-cover rounded-md cursor-pointer"
-            />
-          </a>
+        <div id="modalThambanail">
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#slide1">
+              <img
+                src="https://i.ibb.co.com/fVdLtHQB/BETWEEN-THE-LINES-0744-PJZEDIT-v001.jpg"
+                class="w-16 h-16 object-cover rounded-md cursor-pointer"
+                alt=""
+              />
+            </a>
+            <a href="#slide2">
+              <img
+                src="https://i.ibb.co.com/hJbTfXyN/blue-stage.png"
+                class="w-16 h-16 object-cover rounded-md cursor-pointer"
+                alt=""
+              />
+            </a>
+            <a href="#slide3">
+              <img
+                src="https://i.ibb.co.com/nMQF3bxk/footloose.jpg"
+                class="w-16 h-16 object-cover rounded-md cursor-pointer"
+              />
+            </a>
+            <a href="#slide4">
+              <img
+                src="https://i.ibb.co.com/XfgW5p3m/0203-Trisha-Paytas-Big-Broadway-Dream-Rebecca-JMichelson-7.jpg"
+                class="w-16 h-16 object-cover rounded-md cursor-pointer"
+              />
+            </a>
+            <a href="#slide5">
+              <img
+                src="https://i.ibb.co.com/rGSZZzmG/Sunday-in-the-Park.jpg"
+                class="w-16 h-16 object-cover rounded-md cursor-pointer"
+              />
+            </a>
+          </div>
         </div>
+        <!-- secand carosoal -->
       </div>
     </dialog>
     <script>
@@ -358,12 +403,42 @@
         changes.style.border = "0px solid black";
       });
 
+      const modalImage = document.getElementById("modalImage");
+      const modalVideo = document.getElementById("modalVideo");
+
       const allGrid = document.querySelectorAll("#gridlayout");
+
       for (const grid of allGrid) {
         grid.addEventListener("click", () => {
+          const img = grid.querySelector("img");
+
+          if (img.dataset.type === "video") {
+            modalImage.classList.add("hidden");
+            modalVideo.classList.remove("hidden");
+
+            modalVideo.src =
+              "https://res.cloudinary.com/dbiszakzq/video/upload/v1775707533/home_hero_new_test_bxvpae.mp4";
+          } else {
+            modalVideo.classList.add("hidden");
+            modalImage.classList.remove("hidden");
+
+            modalImage.src = img.src;
+          }
+
           my_modal_3.showModal();
         });
       }
+
+      document.getElementById("secandCarousel").style.display = "none";
+      document.getElementById("modalThambanail").addEventListener("click", () => {
+          document.getElementById("slide").style.display = "none";
+          document.getElementById("secandCarousel").style.display = "flex";
+        });
+
+        document.getElementById('butnClose').addEventListener('click',()=>{
+          document.getElementById("secandCarousel").style.display = "none";
+          document.getElementById("slide").style.display = "block";
+        })
     </script>
   </body>
 </html>
